@@ -46,7 +46,7 @@ spec:
               protocol: TCP
           envFrom:
             - secretRef:
-              name: {{ .Values.infisicalStaticSecret.targets.name }}
+                name: {{ .Values.infisicalStaticSecret.targets.name }}
           {{- with .Values.livenessProbe }}
           livenessProbe:
             {{- toYaml . | nindent 12 }}
